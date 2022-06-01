@@ -75,6 +75,7 @@ def fix_sa_name(name, ext, lenth):
     os.rename(fn1, fn2)
 
 def download(urls, name, ext, live=False):
+    return
     url = urls[0]
     m3u8 = ext == 'm3u8'
     m3u8_crypto = False
