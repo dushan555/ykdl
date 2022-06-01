@@ -74,6 +74,8 @@ class Hunantv(Extractor):
         info.title = data['info']['title'] + ' ' + data['info']['desc']
 
         params['pm2'] = data['atc']['pm2']
+
+        add_header('Cookie', 'HDCN=83A05B6D5AD23F22ADA7AF1362372673-623805882;')
         data = get_response('https://pcweb.api.mgtv.com/player/getSource',
                             params=params).json()
         assert data['code'] == 200, ('[failed] code: {}, msg: {}'
