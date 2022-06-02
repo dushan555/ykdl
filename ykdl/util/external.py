@@ -25,6 +25,7 @@ class PlayerHandle(object):
     def __init__(self, cmds, env, cleanup=[]):
         self.handle = None
         self.cmds = cmds
+        print('cmd ', cmds)
         self.env = env
         if cleanup:
             if callable(cleanup):
@@ -62,6 +63,7 @@ class PlayerHandle(object):
     kill = terminate
 
 def launch_player(player, urls, ext, play=True, **args):
+    print(player)
     if ' ' in player:
         lex = shlex.shlex(player, posix=nt or posix)
         lex.whitespace_split = True
