@@ -160,9 +160,10 @@ class QQ(Extractor):
                 filename = '.'.join(fns)
                 url, vip = qq_get_final_url(cdn_url, vid, fmt_id,
                                             filename, fvkey, PLAYER_PLATFORM)
-                if vip:
-                    self.vip = vip
-                elif url:
+                # if vip:
+                #     self.vip = vip
+                # elif url:
+                if url:
                     urls.append(url)
             else:
                 fns.insert(-1, '1')
