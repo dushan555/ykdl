@@ -155,6 +155,7 @@ def split_cmd_urls(cmd, urls):
     return cmds
 
 def launch_ffmpeg_merge(basename, ext, lenth):
+    return
     print('Merging video %s using FFmpeg:' % basename, file=sys.stderr)
     if ext == 'ts':
         outputfile = basename + '.mp4'
