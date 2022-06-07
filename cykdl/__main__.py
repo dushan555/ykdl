@@ -63,6 +63,7 @@ def parse_args(argv=None):
         args.start -= 1
 
 def clean_slices(name, ext, lenth):
+    return
     for i in range(lenth):
         file_name = '%s_%d.%s' % (name, i, ext)
         os.remove(file_name)
